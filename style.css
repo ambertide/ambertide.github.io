@@ -1,9 +1,0 @@
-body {
-  font-family: roboto-thin,sans-serif;
-  color: white;
-  background-image: url("bg.jpg");
-}
-
-#cat {
-  max-width: 400px;
-}
