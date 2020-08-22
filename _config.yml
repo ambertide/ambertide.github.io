@@ -15,8 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Something Something Programming Something
 email: egeemirozkan@gmail.com
-description: >- # I am a Computer Engineering student from IZTECH,
-	very bored.
+description: I am a Computer Engineering student from IZTECH, very bored.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ambertide.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: eambertide
