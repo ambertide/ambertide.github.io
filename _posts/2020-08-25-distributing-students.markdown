@@ -390,4 +390,4 @@ There likely is a better algorithm out there, maybe even that is used right now,
 [classes file]: https://github.com/ambertide/ExamTest/blob/master/src/internals/classes.py
 [main script file]: https://github.com/ambertide/ExamTest/blob/master/src/sort_students.py
 [a special function from datalite]: https://datalite.readthedocs.io/en/latest/datalite.html#datalite.mass_actions.create_many
-[poorly written paper]: https://github.com/ambertide/ExamTest/blob/master/docs/article.pdf
+[poorly written paper]: https://github.com/ambertide/ExamTest/raw/master/docs/article.pdf
