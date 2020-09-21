@@ -22,19 +22,19 @@ Fluxion is a symbolic computation language, it can be used to define functions, 
 : f'(x)g(x) + f(x)g'(x)
 | (cos(x))(e^x ^ 2x) + (sin(x))(e^x + 2) 
 ```
-# Basic Fluxion
+## Basic Fluxion
 
 Without going into the interesting parts of Fluxion, let's consider the easiest and most fundamental parts of the language.
 
-## Comments
+### Comments
 
 Single line comments start with `;;`. Multiline comments start with `;*` and end with `*;`
 
-## Expressions
+### Expressions
 
 In Fluxion, data is carried through expressions, Expressions come in various shapes and forms.
  
-### Variables and Constants
+#### Variables and Constants
 
 Variables and Constants are two most fundamental building blocks in Fluxion. Constants are numeric values, whereas variables can be single letters, or more complex alphanumeric tokens, with only limitation being that their first character is an english letter.
 
@@ -60,7 +60,7 @@ They can also be substituted.
 A small note here, you probably already realized this, but the assign operator is `:=`. If you come from a languages inspired by the C family, this may look a bit out of place.
 
 
-### Imaginary Numerals
+#### Imaginary Numerals
 
 Fluxion, without any additions, supports the first imaginary number `i`. It is used similar to math.
 
@@ -70,7 +70,7 @@ Fluxion, without any additions, supports the first imaginary number `i`. It is u
 | i
 ```
 
-### Operations
+#### Operations
 
 Of course, mathematics is hardly mathematics without operations, Operations are defined as an expression consisting of one or two more expressions tied together by an operator. Operations can evaluate into simpler expressions.
 
@@ -105,7 +105,7 @@ Here, lines starting with `;` are called conditionals. This is easy to see, but 
 
 In functions, evaluation does not occur until the function is invoked and its variable is bound. This guarantees functions not coming with a large list of conditionals.
 
-### Sets
+#### Sets
 
 Sets are types that carry unordered elements, they can be finite or infinite, and can not carry more than one of the same element. Sets are defined using the `{` and `}`. Empty set is defined thusly:
 
@@ -142,7 +142,7 @@ In set operations, `+` acts as join, `\` acts as complement, `'` also acts as co
 
 When checking for equality and alike with lists, `=` checks if the list element are the same, `<` and `>` checks for subsets and containing.
 
-### Sequences
+#### Sequences
 
 Sequences are ordered groups of elements sequences. Sets that are orderable, that is, finite or countably infinite are automatically sequences. This means `dN` and `dZ` are sequences, (so is `dQ`, but this fact may not be as helpful as you think it is.), members of sequences can be reached via the `_` operand.
 
@@ -167,7 +167,7 @@ Since sequences are lists, `=` does not check for one to one correspondence, thi
 
 This also implies sequences can be used to put limits on a variable inside an expression or a function, which they can.
 
-### Two Dimensional Matrices and Vectors
+#### Two Dimensional Matrices and Vectors
 
 Two dimensional matrices and vectors are a basic type of the Fluxion language, a three by three square matrix can be defined thusly:
 
@@ -184,7 +184,7 @@ Here, `|` works to divide rows, and space is used to divide columns. A vector is
 
 As for operations, binary `+`, `-` works as matrix summation on elements, binary `*` between a numerical value and a matrix works as scalar multiplication, whereas, `*` between two vectors is the dot-product, binary `&` acts as the matrix multiplication and unary `'` works as the transposition of a matrix, finally `|V|` gives the norm of a matrix or a vector.
 
-### Functions
+#### Functions
 
 Functions are special variables, they take one or more variables and act on them, functions are defined similar to normal variables:
 
@@ -220,7 +220,7 @@ Finally, the `&` operator is the function composition operator, and can be used 
 
 This would set the `r(x)` to be equal to `f(g(x))`.
 
-### Logic
+#### Logic
 
 As we see above, Fluxion supports logical expressions, these can be checks, constraints, etc. There are logical operators for comparing: `=` for equals, `\=` for not equals, `>` and `<` for less than and bigger than, as well as `<=` and  `>=` for the _or equal than_ counterparts.
 
@@ -237,7 +237,7 @@ Logical variables can be defined, but they cannot be used inside a normal functi
 
 Here, `P` is a logical variable. There are two logical constants, `True` and `False`.
 
-### Piecewise Functions
+#### Piecewise Functions
 
 Piecewise functions can be easily defined in Fluxion, where the variable declaration of the function is replaced with a conditional bound to a variable. It can be done as follows:
 
@@ -261,7 +261,7 @@ Piecewise functions can also _sometimes_ be differentiated. The above function c
 ```
 
 
-### Limits and Differentiation
+#### Limits and Differentiation
 
 We have already seen that differentiation is supported through the unary `'` operator, limits are also supported using the `->` operator as well as `-> +` and `->-` operators as follows:
 
@@ -298,7 +298,7 @@ It can also be used more than once
 | 12x^2
 ```
 
-## Equation Solving
+### Equation Solving
 
 Conditionals by themselves, if written following a `?`, logical statements evaluates and binds a variable. Take, for instance:
 
@@ -320,27 +320,27 @@ Equation solving can also be used with imaginary numbers.
 | 3
 ```
 
-## Keywords
+### Keywords
 
 Some keywords names are _reserved_, they can be variables, functions, or sometimes, neither. They can be categorized roughly as follows:
 
-### Constants
+#### Constants
 
 Special mathematical constants such as `e`, `pi` and `tau` are predefined.
 
 Mathematical domains, such as natural numbers are predefined `dN`, `dZ`, `dQ`, `dIQ`, `dC` as well as some of their positive and negative counterparts, `dNn` `dNp`, `dZn`, `dZp`, `dQn`, `dIQn`, `dIQp`, `dCn`, `dCp`.
 
-### Functions
+#### Functions
 
 Trigonometric functions such as `sin`, `cos`, `tan`, `cot`, `sec`, `csc`, `havsin` are predefined, as is their reverse functions, they are called with an extra `a` before, such as `asin`, `acos` (or with normal reverse function notation).
 
 Moreover, `sqrt` and `square` is also predefined as shorthand, as well as the `root(base, power)` function.
 
-### Statements
+#### Statements
 
 Statements are an integral part of the language, they cannot be defined by the users, and are _baked-in_ to the language implementation. As of its current iteration, We have already seen `in` which is used to check if an element is inside a set. There is one we haven't touched upon yet, the `include`. We will talk about include soon.
 
-### Not-a-Numbers
+#### Not-a-Numbers
 
 `Undefined` is used for division of any number by zero, a piecewise function's result outside its defined range and differentiation of a piecewise functions that non-continuous around its critical parts.
 
@@ -348,21 +348,21 @@ Statements are an integral part of the language, they cannot be defined by the u
 
 `inf` and `-inf` is used for infinity and negative infinity for derivation and limits, which will be introduced later.
 
-## Reserved Keywords
+### Reserved Keywords
 
 Some keywords, despite not being used by the language, are reserved for possible future use, these are `const`, `string`, `list`, `goto` and
 
-# Standard Library
+## Standard Library
 
 Fluxion isn't just what you get right out of the box, there is more to it, to understand it, we need to talk about _Transformations_ and _Contexts_.
 
-## Transformations
+### Transformations
 
 You can't do everything using operations. For instance, differentiation and integration aren't really functions. They act on the expressions themselves in very complex ways, they _transform_ them into other expressions, hence the name transformation.
 
 You might have realized, despite them being an integral (hehe) part of maths, I have not introduced integration or complex differentiation. That's because, in many contexts, you don't need them. But sometimes, you do, so how do we reach them?
 
-## Contexts
+### Contexts
 
 Fluxion handles these different contexts using something called, well, contexts. Using the `introduce` keyword, you can introduce a new context to your program, following this, functions and variables from the context can be reached using the `::` operator. Let us see an example:
 
@@ -375,27 +375,27 @@ Fluxion handles these different contexts using something called, well, contexts.
 
 Within a program, many contexts can be introduced. Standard distribution of Fluxion has many Context available to the user, as of this post, four basic but vital contexts are planned.
 
-### Complex
+#### Complex
 
 Complex context includes support for complex numerals up to four dimensions, as well as the operations surrounding them, this context includes `Complex::complex(real, i, j, k)` once a complex number is formed, normal algebraic expressions can act on it. It also includes more functionality for imaginary numbers, such as polar representation, ie: `Complex::polar(imaginary)`.
 
-### Calculus
+#### Calculus
 
 Calculus is the lifeblood of maths, hence, the Calculus context is rich and has many functions. These include `Calculus::integral(function, variable)`, `Calculus::differentiate(function, variable, degree)` (which includes partial derivation), `Calculus::max` and `Calculus::min` for finding the maximum and minimums points of a function.
 
-### LaTeX
+#### LaTeX
 
 LaTeX context allows for painless rendering of expressions, once introduced, `Latex::convert` will convert your expression to its LaTeX representation, which, with proper IDE support can be shown on the IDE itself.
 
-### IO
+#### IO
 
 The IO context allows for reading and writing data to files. IO context provide the functions for this purpose `IO:read`, `IO:append` and `IO:overwrite`. These functions are special, when using `IO:overwrite` and `IO:append`, you will find that multiline comments you have added inside the function call will find their way into the file, this is not a mistake.
 
-# Extending Fluxion
+## Extending Fluxion
 
 Fluxion supports new context creation, similar to how other languages support package creation. As well as installing packages to your installation.
 
-## Installing User Defined Contexts
+### Installing User Defined Contexts
 
 This is handled by the `fluent`, a tool that is distributed alongside with Fluxion. For instance, if a Fluxion context distribution exists at example.com, one can use the `fluent` to retrieve and install it thusly:
 
@@ -404,7 +404,7 @@ This is handled by the `fluent`, a tool that is distributed alongside with Fluxi
 Unlike many other languages, however, Fluxion is not very suitable for writing actual components that interact and extend the language. This creates two different ways of writing contexts:
 
 
-## Native contexts
+### Native contexts
 
 These contexts are written in Fluxion language itself, and are stored in *.fluxion files. They may define mathematical functions, constants and expressions that are easily definable in Fluxion.
 
@@ -419,40 +419,40 @@ export tan
 
 If a user tried to introduce this context using the `introduce tangent`, they would be able to access `tangent::tan`, `introduce` can also be used with version names, such as `introduce tangent 3.1.2` to signal that this script needs a specific version.
 
-## C Extensions
+### C Extensions
 
 The really complex contexts are written in `C` for the reference implementation. This is too much of a complex topic to go into right now, but their installation works the same.
 
-# Embedding Fluxion
+## Embedding Fluxion
 
 Fluxion can be used as a part of a bigger whole. Fluxion, its reference implementation, `FluxionCore` allows it to be embedded to applications using `C` and `C++`, as well as any application that can import `C` headers, plan is to extend this capability by creating packages for two most popular scientific programming languages, Python and Julia.
 
-# Roadmap
+## Roadmap
 
 I have a roadmap planned for Fluxion, I am not experienced in these things a lot, though I have dabbled on language creation before on small occasions, but here is what I plan to do:
 
-## Design Specification(s)
+### Design Specification(s)
 
 Fluxion will first have two design specifications, they will be in depth papers and guides, explaining what the language features will be, first specification will be about the syntax and semantics of the general language itself and the second specification will be about the standard library.
 
 Anyone who wants to have a complete Fluxion distribution will be able to pick this specification up and implement it, for ourselves, the development plan continues to...
 
-## Implementation Specification(s)
+### Implementation Specification(s)
 
 Following the creation of the design specifications, two implementation specifications will be detailed, these will detail how the implementation of the design will go, data structures that will be used, packages and alike. They may also include references to some standard optimizations such as the tail-end and NaN boxing. This will also include the design for C extension modules as well as the inner workings of the `fluent` and what it expects to see.
 
-## Reference Implementation
+### Reference Implementation
 
 Finally, the reference implementation will be written according to the implementation specification, this will occur in four phases, `FluxionCore` is the core of the language that can be embedded in bigger projects, `FluxionStdLib` is the standard library, written with the C extension module, `Fluxion` is the repl and wrapper around the `FluxionCore` and finally `fluent` is the context manager for the Fluxion project.
 
-## Test Suite
+### Test Suite
 
 Despite being the fourth in this list, a suite of tets and benchmarks will be developed *during* the third phase, these will be used to benchmark and test the language features of the Fluxion language.
 
-## Optimization and Refactoring
+### Optimization and Refactoring
 
 Finally, to tie up the lose ends and to fasten the language, the code might be refactored in some places, test suite will be pivotal here as it will make sure we won't break anything.
 
-## Publishing and Continued Development
+### Publishing and Continued Development
 
 Fluxion will be free and open source on GitHub. Versioned using Semantic Versioning, each new version will see updates to necessary specifications, tests and of course, the implementation.
