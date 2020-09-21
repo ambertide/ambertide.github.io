@@ -1,6 +1,6 @@
 ---
 layout:	post
-title:	"Introduction to Fluxion Language"
+title:	"Introduction to the Fluxion Language"
 date:	2020-09-21 19:32:00 +0300
 categories: maths
 ---
