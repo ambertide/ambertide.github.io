@@ -1,11 +1,11 @@
 ---
 layout:	post
-title:	"DRAFT: Introduction to Fluxion Symbolic Computation Language"
+title:	"Introduction to Fluxion Language"
 date:	2020-09-19 14:00:00 +0300
 categories: maths
 ---
 
-When it comes to scientific computing using specially prepared languages and packages, there are many options from native Matlab to Python and Julia and even some more calculator-like options that you can use in your phones like Symbolab and Wolfram Alpha, yet, one has to wonder, why not both.
+When it comes to scientific computing using specially prepared languages and packages, there are many options from native Matlab to Python and Julia and even some more calculator-like options that you can use in your phones like Wolfram Alpha, yet, one has to wonder, why not both.
 
 Wouldn't it be cool to have a single free and open source language that can run on a phone and a computer alike? A symbolic computation library and language that can be embedded to almost any application on any platform?
 
