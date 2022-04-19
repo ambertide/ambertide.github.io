@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Hello, my name is Ege Özkan, I am a Computer Engineering student from IZTECH
-which is a nice little university in Urla, Izmir. I am deeply interested in
-technologies related to education.
-
-Check my social medias, criticize my repositories thanks.
+Hello, my name is Ege Özkan, I am a Computer Engineering student from IZTECH, currently at my last semester. I am
+also working part-time in [Jotform](https://www.jotform.com/)
+as a part time support.
